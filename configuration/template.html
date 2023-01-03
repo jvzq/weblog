@@ -216,7 +216,7 @@
       }
 
       h3.more:before {
-        content: "\f219";
+        content: "\f005";
         font: var(--fa-font-solid);
         margin-right: 0.5rem;
       }
@@ -232,11 +232,11 @@
       input[type="text"] {
         border: 1px solid var(--searchbox);
         border-radius: 5px;
-        padding: 0 10px;
-        width: 265px;
+        width: 250px;
         height: 30px;
         background-color: var(--searchbox);
         color: var(--searchboxtext);
+        margin-top: 0.5rem;
         onchange: submit();
       }
 
@@ -277,12 +277,10 @@
 	<li><a href="/random">random post</a></li>
 </ul>
       <h3 class="search">Search posts</h3>
-      <ul>
       <form action="/?" method="get">
         <label for="search"></label>
         <input type="text" name="search"/>
       </form>
-      </ul>
     </main>
     <footer>
       <p>
