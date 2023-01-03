@@ -16,7 +16,7 @@ Separator:  ·
 
 Landing page: home
 
-Navigation: home, [about](https://omg.j-v.cc), archive, [rss](/rss.xml)
+Navigation: [about](https://omg.j-v.cc), archive, [rss](/rss.xml)
 
 Random post location: /random
 ;; Time stuff
@@ -52,7 +52,7 @@ This is a new blog post. You can author it in _Markdown_, which is **awesome**.]
 ;; Recent posts {recent-posts}
 ;; ---------------------------
 
-Recent posts count: 3
+Recent posts count: 5
 Recent posts format: <<[
 <ul>
 [post:begin]<li><a href="$location">$title</a></li>[post:end]
