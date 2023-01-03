@@ -210,7 +210,13 @@
       }
 
       h3.search:before {
-        content: "\f002";
+        content: "\f277";
+        font: var(--fa-font-solid);
+        margin-right: 0.5rem;
+      }
+      
+      h3.more:before {
+        content: "\e2ca";
         font: var(--fa-font-solid);
         margin-right: 0.5rem;
       }
@@ -263,6 +269,10 @@
       <h3 class="recent">Recent posts</h3>
 
       {recent-posts}
+      
+      <h3 class="more">Stuff</h3>
+      - test
+      - test
 
       <h3 class="search">Search posts</h3>
       <form action="/?" method="get">
