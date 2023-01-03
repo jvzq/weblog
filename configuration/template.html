@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{weblog-title}{separator}{post-title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {feeds}
+    <style>
+      @import url("https://static.omg.lol/type/font-honey.css");
+      @import url("https://static.omg.lol/type/font-lato-regular.css");
+      @import url("https://static.omg.lol/type/font-lato-bold.css");
+      @import url("https://static.omg.lol/type/font-lato-italic.css");
+      @import url("https://static.omg.lol/type/font-md-io.css");
+      @import url("https://static.omg.lol/type/fontawesome-free/css/all.css");
+
+      :root {
+        --foreground: #4c4f69;
+        --background: #eff1f5;
+        --link: #8839ef;
+        --accent: #6c6f85;
+        --subtext: #5c5f77;
+        --searchbox: #dce0e8;
+        --tag: #8839ef;
+        --codebg: #dce0e8;
+        --codetext: #5c5f77;
+        --searchboxtext: #4c4f69;
+      }
+
+      img {
+        border-radius: 1%; 
+        display: block;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --foreground: #cdd6f4;
+          --background: #1e1e2e;
+          --link: #cba6f7;
+          --accent: #a6adc8;
+          --subtext: #bac2de;
+          --searchbox: #bac2de;
+          --tag: #cba6f7;
+          --codebg: #11111b;
+          --codetext: #bac2de;
+          --searchboxtext: #4c4f69;
+ 
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        font-size: 120%;
+        color: var(--foreground);
+        background: var(--background);
+      }
+
+      header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      header nav li {
+        display: inline-block;
+      }
+
+      header nav li a {
+        display: block;
+        text-decoration: none;
+        margin-right: 1em;
+      }
+      article blockquote {
+        font-style: italic;
+        border-left: 3px solid var(--link);
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1.5rem;
+        color: var(--accent);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "VC Honey Deck", serif;
+        margin: 1rem 0;
+        color: var(--subtext);
+      }
+
+      p,
+      li {
+        line-height: 160%;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: 60em;
+        margin: 2em auto;
+        padding: 0 1em;
+      }
+
+      header {
+        margin-top: 4em;
+      }
+
+      footer p {
+        margin-top: 5em;
+        font-size: 90%;
+        text-align: center;
+      }
+
+      a:link {
+        color: var(--link);
+      }
+      a:visited {
+        color: var(--link);
+      }
+      a:hover {
+        color: var(--link);
+      }
+      a:active {
+        color: var(--link);
+      }
+
+      .post-info,
+      .post-tags {
+        font-size: 85%;
+        color: var(--accent);
+        text-align: right;
+      }
+
+      .post-info i:nth-child(2) {
+        margin-left: 0.75em;
+      }
+
+      .tag {
+        background: var(--tag);
+        color: var(--background) !important;
+        padding: 0.3em 0.4em;
+        margin: 0.8em 0 0 0.4em;
+        border-radius: 0.5em;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        margin: 2em 0;
+      }
+
+      code {
+        padding: 0.2em 0.3em;
+        border: 1px solid var(--accent);
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      pre,
+      code {
+        font-family: "MD IO 0.4";
+        font-size: 90%;
+      }
+
+      pre code {
+        background: var(--codebg);
+        color: var(--codetxt);
+        display: inline-block;
+        padding: 1em;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        padding: 0.75em;
+        text-align: left;
+        border: 1px solid var(--accent);
+      }
+
+      .weblog-title a {
+        text-decoration: none;
+        color: var(--foreground);
+      }
+
+      a:hover,
+      a:active {
+        color: var(--text);
+        text-decoration: #bac2de;
+      }
+      h3.recent:before {
+        content: "\f674";
+        font: var(--fa-font-solid);
+        margin-right: 0.5rem;
+      }
+
+      h3.search:before {
+        content: "\f002";
+        font: var(--fa-font-solid);
+        margin-right: 0.5rem;
+      }
+
+      footer a {
+        text-decoration: none;
+      }
+      form {
+        display: flex;
+        align-items: center;
+      }
+
+      input[type="text"] {
+        border: 1px solid var(--searchbox);
+        border-radius: 5px;
+        padding: 0 10px;
+        width: 265px;
+        height: 30px;
+        background-color: var(--searchbox);
+        color: var(--searchboxtext);
+        onchange: submit();
+      }
+
+      article blockquote {
+        border-left: 3px solid var(--accent);
+        padding-left: 1rem;
+        color: var(--subtext);
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="weblog-title"><a href="/">{weblog-title}</a></h1>
+      {navigation}
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+        {body}
+        <aside class="post-info">
+          <i class="fa-solid fa-clock"></i> {date}
+        </aside>
+        <aside class="post-tags">{tags}</aside>
+      </article>
+
+      <hr />
+
+      <h3 class="recent">Recent posts</h3>
+
+      {recent-posts}
+
+      <h3 class="search">Search posts</h3>
+      <form action="/?" method="get">
+        <label for="search"></label>
+        <input type="text" name="search" />
+      </form>
+    </main>
+
+    <footer>
+      <p>
+        © 2022-23 <a href="https://j-v.cc">J-V.CC</a> | Made w/
+        <a href="https://weblog.lol">weblog.lol</a>
+      </p>
+// PUSH! 
+    </footer>
+  </body>
+</html>
