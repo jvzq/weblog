@@ -26,6 +26,11 @@
         --searchboxtext: #4c4f69;
       }
 
+      img {
+        border-radius: 1%; 
+        display: block;
+      }
+
       @media (prefers-color-scheme: dark) {
         :root {
           --foreground: #cdd6f4;
@@ -75,7 +80,6 @@
         margin-right: 0;
         padding-left: 1.5rem;
         color: var(--accent);
-        
       }
       h1,
       h2,
@@ -99,18 +103,16 @@
         max-width: 60em;
         margin: 2em auto;
         padding: 0 1em;
-        
       }
 
       header {
         margin-top: 4em;
       }
 
-      footer p,a {
+      footer p {
         margin-top: 5em;
         font-size: 90%;
         text-align: center;
-        text-decoration: none
       }
 
       a:link {
@@ -178,10 +180,8 @@
 
       img {
         max-width: 100%;
-        border-radius: 1%; 
-        display: block;
       }
-      
+
       table {
         border-collapse: collapse;
       }
@@ -216,12 +216,14 @@
       }
 
       h3.more:before {
-        content: "\f005";
+        content: "\f219";
         font: var(--fa-font-solid);
         margin-right: 0.5rem;
       }
 
-
+      footer a {
+        text-decoration: none;
+      }
       form {
         display: flex;
         align-items: center;
@@ -230,11 +232,11 @@
       input[type="text"] {
         border: 1px solid var(--searchbox);
         border-radius: 5px;
-        width: 250px;
+        padding: 0 10px;
+        width: 265px;
         height: 30px;
         background-color: var(--searchbox);
         color: var(--searchboxtext);
-        margin-top: 0.5rem;
         onchange: submit();
       }
 
@@ -248,8 +250,9 @@
   </head>
   <body>
     <header>
-    <h1 class="weblog-title"><a href="/">{weblog-title}</a></h1>
-    {navigation}
+      <h1 class="weblog-title"><a href="/">{weblog-title}</a></h1>
+      {navigation}
+      <nav></nav>
     </header>
 
     <main>
@@ -274,14 +277,16 @@
 	<li><a href="/random">random post</a></li>
 </ul>
       <h3 class="search">Search posts</h3>
+      <ul>
       <form action="/?" method="get">
         <label for="search"></label>
         <input type="text" name="search"/>
       </form>
+      </ul>
     </main>
     <footer>
       <p>
-        Made w/ <a href="https://weblog.lol">weblog.lol </a> 
+        Made w/ <a href="https://weblog.lol">weblog.lol</a>
       </p>
     </footer>
   </body>
