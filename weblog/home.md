@@ -1,7 +1,7 @@
 Date: 1900-1-1 0:00
 Type: page
 Title: home
-Template: Page
+Template: page
 
 Hello, I am Jose. This blog is currently a WIP :-)
 

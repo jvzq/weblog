@@ -1,6 +1,6 @@
 ---
 Date: 2023-01-04 22:13
-Type: Template 
+Type: Template
 Title: page
 ---
 
@@ -266,7 +266,7 @@ Title: page
       <article>
         {body}
       </article>
-      
+
       <hr/>
 
       <h3 class="recent">Recent posts</h3>
