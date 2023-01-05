@@ -1,3 +1,9 @@
+---
+Date: 2023-01-04 22:13
+Type: Template 
+Title: page
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -259,12 +265,8 @@
     <main>
       <article>
         {body}
-        <aside class="post-info">
-          <i class="fa-solid fa-clock"></i> {date}
-        </aside>
-        <aside class="post-tags">{tags}</aside>
       </article>
-
+      
       <hr/>
 
       <h3 class="recent">Recent posts</h3>
