@@ -3,7 +3,12 @@ Type: page
 Title: home
 Template: page
 
-Hello, I am Jose. This blog is currently a WIP :-)
+hey! I'm jose. thanks for checking out my little corner on the internet. 
 
-Made with weblog.lol, a new service from [omg.lol](https://home.omg.lol/referred-by/vzq)
+I like to think of myself as a developer and designer in my free time. some of my hobbies include plants 🌱, mechanical keyboards, and watching movies. 
+
+In this new weblog, I'll be talking about just about anything that interests me - things like movies, art, games, tech (especially indie), and whatever else catches my fancy. 
+
+thanks for visiting! :-)
+
 
